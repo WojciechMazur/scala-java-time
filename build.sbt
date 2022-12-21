@@ -22,7 +22,7 @@ val versions: Map[String, String] = {
 val scalaVer                = versions("2.13")
 val scala3Ver               = versions("3")
 val tzdbVersion             = "2019c"
-val scalajavaLocalesVersion = "1.4.0"
+val scalajavaLocalesVersion = "1.5.1"
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
 lazy val downloadFromZip: TaskKey[Unit] =
@@ -34,6 +34,7 @@ addCommandAlias("demo", ";clean;demo/fastOptJS;demo/fullOptJS")
 inThisBuild(
   List(
     organization := "io.github.cquiroz",
+    version := "2.4.0",
     homepage     := Some(url("https://github.com/cquiroz/scala-java-time")),
     licenses     := Seq("BSD 3-Clause License" -> url("https://opensource.org/licenses/BSD-3-Clause")),
     developers   := List(
